@@ -32,7 +32,7 @@ module.exports = function(grunt){
         livereload: true,
       },
       //監視対象とするファイル
-      files: ["assets/*", "page/*"],
+      files: ["assets/bootstrap/less/*.less","assets/js/*.js", "*.html"],
       //変更があったときのタスク
       tasks: ["less:development"]
     },
@@ -40,7 +40,7 @@ module.exports = function(grunt){
     connect: {
       development: {
         options: {
-          base: "../"
+          base: "./"
         }
       }
     }
