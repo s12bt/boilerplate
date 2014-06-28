@@ -1,7 +1,7 @@
 boilerplate
 ===========
 
-my boilerplate with grunt and bootsttrap.
+my boilerplate for static site with grunt and bootsttrap.
 
 ## Usage
 
