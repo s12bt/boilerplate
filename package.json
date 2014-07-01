@@ -8,9 +8,10 @@
     "grunt-contrib-less": "~0.8.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-connect": "~0.6.0",
-    "jquery": "*"
+    "jquery": "~2.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "git clone https://github.com/twbs/bootstrap.git ./assets/bootstrap"
