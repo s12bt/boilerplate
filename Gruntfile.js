@@ -13,7 +13,9 @@ module.exports = function(grunt){
       development: {
         files: {
           //css file : less file
-          "assets/css/style.css":"assets/bootstrap/less/bootstrap.less"
+          "assets/bootstrap/dist/bootstrap.css":"assets/bootstrap/less/bootstrap.less",
+          "assets/bootstrap/dist/bootstrap-theme.css":"assets/bootstrap/less/theme.less",
+          "assets/css/style.css":"assets/less/style.less"
         }
       },
       production: {
@@ -22,7 +24,9 @@ module.exports = function(grunt){
         },
         files: {
           //css file : less file
-          "assets/css/style.css":"assets/bootstrap/less/bootstrap.less"
+          "assets/bootstrap/dist/bootstrap.css":"assets/bootstrap/less/bootstrap.less",
+          "assets/bootstrap/dist/bootstrap-theme.css":"assets/bootstrap/less/theme.less",
+          "assets/css/style.css":"assets/less/style.less"
         }
       }
     },
@@ -32,7 +36,7 @@ module.exports = function(grunt){
         livereload: true,
       },
       //監視対象とするファイル
-      files: ["assets/bootstrap/less/*.less","assets/js/*.js", "*.html"],
+      files: ["assets/bootstrap/less/*.less", "assets/less/*.less", "assets/js/*.js", "*.html"],
       //変更があったときのタスク
       tasks: ["less:development"]
     },
@@ -54,8 +58,8 @@ module.exports = function(grunt){
     grunt.file.delete("assets/bootstrap/.git");
     console.log("delete assets/bootstrap/.git");
     grunt.task.run(["less:development"]);
-    grunt.file.copy("node_modules/jquery/dist/jquery.min.js", "assets/js/jquery.min.js");
-    grunt.file.copy("node_modules/jquery/dist/jquery.min.map", "assets/js/jquery.min.map");
+    grunt.file.copy("node_modules/jquery/dist/jquery.min.js", "assets/jquery/jquery.min.js");
+    grunt.file.copy("node_modules/jquery/dist/jquery.min.map", "assets/jquery/jquery.min.map");
   });
 
-}
+};
