@@ -17,8 +17,29 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 - ファイルを監視を開始
 - localhost:8000で接続
 
+## ディレクトリ構成
+`grunt scaffold`を打った時点でのディレクトリ構成
+```
+├── README.md
+├── Gruntfile.js
+├── package.json
+├── assets
+│   ├── bootstrap
+│   ├── jquery
+│   ├── less
+│   │   └──style.less
+│   ├── css
+│   │   └──style.css
+│   ├── img
+│   │   └──logo.png
+│   └── js
+│       ├──jquery.min.js
+│       └──script.js
+├── node_modules
+└── index.html
+```
 
-## Usage
+## boilerplate
 ```
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,23 +71,5 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 </html>
 ```
 
-## ディレクトリ構成
-`grunt scaffold`を打った時点でのディレクトリ構成
-```
-├── README.md
-├── Gruntfile.js
-├── package.json
-├── assets
-│   ├── bootstrap
-│   ├── jquery
-│   ├── less
-│   │   └──style.less
-│   ├── css
-│   │   └──style.css
-│   ├── img
-│   │   └──logo.png
-│   └── js
-│       └──script.js
-├── node_modules
-└── index.html
-```
+## メモ
+公開に必要なファイルは、作成したhtmlファイルとassets以下だけ。
