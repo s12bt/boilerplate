@@ -1,7 +1,11 @@
 {
   "name": "boilertemplate-with-bootstrap",
   "version": "0.0.1",
-  "description": "",
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/isaacs/npm.git"
+  },
+  "description": "Bootstrapで静的サイトを作るための準備をGruntですぱっとしたい。Bootstrap, jqueryのダウンロード、ディレクトリ構成の準備まで。",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.1",
@@ -10,10 +14,7 @@
     "grunt-contrib-connect": "~0.6.0",
     "jquery": "~2.1.0"
   },
-  "devDependencies": {
-    },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "git clone https://github.com/twbs/bootstrap.git ./assets/bootstrap"
   },
 
