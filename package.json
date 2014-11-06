@@ -8,14 +8,10 @@
   "description": "Bootstrapで静的サイトを作るための準備をGruntですぱっとしたい。Bootstrap, jqueryのダウンロード、ディレクトリ構成の準備まで。",
   "main": "Gruntfile.js",
   "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.8.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-connect": "~0.6.0",
-    "jquery": "~2.1.0"
-  },
-  "scripts": {
-    "postinstall": "git clone https://github.com/twbs/bootstrap.git ./assets/bootstrap"
+    "grunt": "latest",
+    "grunt-contrib": "latest",
+    "jquery": "2.x",
+    "bootstrap":"3.x"
   },
 
   "author": "Yuki Suzuki@s12bt",

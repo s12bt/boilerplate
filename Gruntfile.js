@@ -7,21 +7,11 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-contrib-connect");
+  grunt.loadNpmTasks("grunt-contrib-copy");
 
   grunt.initConfig({
     less: {
       development: {
-        files: {
-          //css file : less file
-          "assets/bootstrap/dist/bootstrap.css":"assets/bootstrap/less/bootstrap.less",
-          "assets/bootstrap/dist/bootstrap-theme.css":"assets/bootstrap/less/theme.less",
-          "assets/css/style.css":"assets/less/style.less"
-        }
-      },
-      production: {
-        options: {
-          cleancss: true
-        },
         files: {
           //css file : less file
           "assets/bootstrap/dist/bootstrap.css":"assets/bootstrap/less/bootstrap.less",
@@ -47,6 +37,20 @@ module.exports = function(grunt){
           base: "./"
         }
       }
+    },
+
+    copy: {
+      scaffold: {
+        files: [
+          {
+            expand: true,
+            cwd: "node_modules/bootstrap",
+            src: ["**"],
+            dest: "assets/components/bootstrap"
+          }
+        ]
+      }
+
     }
   });
 
@@ -55,11 +59,13 @@ module.exports = function(grunt){
 
 
   grunt.registerTask("scaffold", function(){
-    grunt.file.delete("assets/bootstrap/.git");
-    console.log("delete assets/bootstrap/.git");
-    grunt.task.run(["less:development"]);
-    grunt.file.copy("node_modules/jquery/dist/jquery.min.js", "assets/jquery/jquery.min.js");
-    grunt.file.copy("node_modules/jquery/dist/jquery.min.map", "assets/jquery/jquery.min.map");
+    grunt.file.copy("node_modules/jquery/dist/jquery.min.js", "assets/components/jquery/jquery.min.js");
+    grunt.file.copy("node_modules/jquery/dist/jquery.min.map", "assets/components/jquery/jquery.min.map");
+
+    grunt.task.run(["copy:scaffold"]); //grunt.file.copyだとディレクトリがコピーできなかった
+    grunt.file.copy("assets/components/bootstrap/less/variables.less", "assets/less/bootstrap.variables.override.less");
+
+    //grunt.task.run(["less:development"]);
   });
 
 };
