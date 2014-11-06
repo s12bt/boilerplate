@@ -13,6 +13,9 @@
     "jquery": "2.x",
     "bootstrap":"3.x"
   },
+  "scripts": {
+    "postinstall": "git clone https://github.com/twbs/bootstrap.git ./assets/components/bootstrap"
+  },
 
   "author": "Yuki Suzuki@s12bt",
   "license": "BSD-2-Clause"
