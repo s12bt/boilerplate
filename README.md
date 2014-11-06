@@ -9,10 +9,11 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 2. `npm install`
  - install grunt, jquery, bootstrap
 3. `grunt scaffold`
- - assets/bootstrapの.gitを削除
- -- twb/bootstrapレポジトリとの関係性を切る
- - lessファイルのコンパイル
  - jqueryファイルをnode_modules/からassets/jqueryに移動
+ - assets/components/bootstrap/lessvariables.lessをassets/lessにbootstrap.variables.overrideとしてコピー
+ - シンボリックリンク assets/components/bootstrap/lessvariables.less -> assets/lessにbootstrap.variables.override
+ - lessファイルのコンパイル
+
 3. `grunt`
 - ファイルを監視を開始
 - localhost:8000で接続
@@ -24,16 +25,18 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 ├── Gruntfile.js
 ├── package.json
 ├── assets
-│   ├── bootstrap
-│   ├── jquery
+│   ├── components
+│   │   ├──bootstrap
+│   │   └──jquery
 │   ├── less
+│   │   ├──bootstrap.variables.override.less  
+│   │   ├──bootstrap.override.less
 │   │   └──style.less
 │   ├── css
 │   │   └──style.css
 │   ├── img
 │   │   └──logo.png
 │   └── js
-│       ├──jquery.min.js
 │       └──script.js
 ├── node_modules
 └── index.html
@@ -52,11 +55,11 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 
     <title>Boiler template</title>
 
-    <link href="assets/bootstrap/dist/bootstrap.css" rel="stylesheet">
-    <link href="assets/bootstrap/dist/bootstrap-theme.css" rel="stylesheet">
+    <link href="assets/components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
