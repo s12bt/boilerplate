@@ -9,7 +9,10 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "latest",
-    "grunt-contrib": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-symlink": "latest",
     "jquery": "2.x",
     "bootstrap":"3.x"
   },
