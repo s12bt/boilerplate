@@ -1,6 +1,8 @@
 boilerplate
 ===========
 
+** todo: いろいろ触ってから更新してない。要Gruntfile.js確認 2015.2.16 **
+
 Bootstrapで静的サイトを作るための準備をGruntですぱっとしたい。Bootstrap, jqueryのダウンロード、ディレクトリ構成の準備まで。
 
 ## Command
@@ -29,7 +31,7 @@ Bootstrapで静的サイトを作るための準備をGruntですぱっとした
 │   │   ├──bootstrap
 │   │   └──jquery
 │   ├── less
-│   │   ├──bootstrap.variables.override.less  
+│   │   ├──bootstrap.variables.override.less
 │   │   ├──bootstrap.override.less
 │   │   └──style.less
 │   ├── css
