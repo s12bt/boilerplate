@@ -1,25 +1,24 @@
 {
   "name": "boilertemplate-with-bootstrap",
-  "version": "0.0.1",
-  "repository" : {
-    "type" : "git",
-    "url" : "http://github.com/isaacs/npm.git"
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/isaacs/npm.git"
   },
-  "description": "Bootstrapで静的サイトを作るための準備をGruntですぱっとしたい。Bootstrap, jqueryのダウンロード、ディレクトリ構成の準備まで。",
-  "main": "Gruntfile.js",
+  "description": "s12bt boilerplate",
+  "main": "gulpfile.js",
   "dependencies": {
-    "grunt": "latest",
-    "grunt-contrib-less": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-contrib-connect": "latest",
-    "grunt-contrib-symlink": "latest",
-    "jquery": "2.x",
-    "bootstrap":"3.x"
+    "bootstrap": "3.x",
+    "del": "^1.1.1",
+    "font-awesome": "latest",
+    "gulp": "latest",
+    "gulp-connect": "^2.2.0",
+    "gulp-less": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "^1.2.0",
+    "gulp-symlink": "^2.1.0",
+    "jquery": "2.x"
   },
-  "scripts": {
-    "postinstall": "git clone https://github.com/twbs/bootstrap.git ./assets/components/bootstrap"
-  },
-
   "author": "Yuki Suzuki@s12bt",
   "license": "BSD-2-Clause"
 }
