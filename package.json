@@ -1,9 +1,9 @@
 {
   "name": "boilertemplate-with-bootstrap",
-  "version": "0.0.1",
+  "version": "0.1",
   "repository" : {
     "type" : "git",
-    "url" : "http://github.com/isaacs/npm.git"
+    "url" : "https://github.com/s12bt/boilerplate"
   },
   "description": "Bootstrapで静的サイトを作るための準備をGruntですぱっとしたい。Bootstrap, jqueryのダウンロード、ディレクトリ構成の準備まで。",
   "main": "Gruntfile.js",

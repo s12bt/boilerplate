@@ -18,6 +18,17 @@ module.exports = function(grunt){
          "assets/components/bootstrap/dist/css/bootstrap-theme.css":"assets/components/bootstrap/less/theme.less",
           "assets/css/style.css":"assets/less/style.less"
         }
+      },
+      production: {
+        options: {
+          cleancss: true
+        },
+        files: {
+          //css file : less file
+          "assets/components/bootstrap/dist/css/bootstrap.css":"assets/components/bootstrap/less/bootstrap.less",
+         "assets/components/bootstrap/dist/css/bootstrap-theme.css":"assets/components/bootstrap/less/theme.less",
+          "assets/css/style.css":"assets/less/style.less"
+        }
       }
     },
 
@@ -43,7 +54,6 @@ module.exports = function(grunt){
         overwrite: true
       },
       explicit: {
-
         src: "assets/less/bootstrap.variables.override.less",
         dest: "assets/components/bootstrap/less/variables.less"
       }
